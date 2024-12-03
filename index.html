@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Caesar Cipher</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1><i class="fa-solid fa-lock"></i> Caesar Cipher <i class="fa-solid fa-key"></i></h1>
+        </div>
+        <div class="sub-title">
+            <h2>Criptografe suas senhas e arquive-as codificadas.</h2>
+        </div>
+    
+        <section>
+            <div class="text-box">
+                <textarea id="text-box" placeholder="Insira seu texto"></textarea>
+            </div>
+    
+            <div class="choose">
+                <label for="range">Escolha a chave:</label>
+                <input type="range" id="range" min="1" max="26" value="1">
+                <span id="range-label">1</span>
+            </div>
+    
+            <fieldset>
+                <legend>Escolha a ação:</legend>
+                <div>
+                    <input type="radio" name="action" id="codificar" value="encode" checked>
+                    <label for="codificar">Cifrar</label>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div>
+                    <input type="radio" name="action" id="decodificar" value="decode">
+                    <label for="decodificar">Decifrar</label>
+                    <i class="fa-solid fa-lock-open"></i>
+                </div>
+            </fieldset>
+    
+            <div class="resposta">
+                <textarea aria-live="polite" placeholder="Resultado aparecerá aqui..." readonly></textarea>
+            </div>
+            
+    
+            <div class="btn">
+                <button id="submit-button">Executar</button>
+                <button id="copy-button"><i class="fa-solid fa-copy"> </i> Copiar</button>
+            </div>
+            
+        </section>
+        <footer>
+            <p>&copy;	 Azogh / 2024</p>
+        </footer>
+    </main>
+
+  
+    <script src="./src/js/logica.js"></script>
+</body>
+
+</html>
